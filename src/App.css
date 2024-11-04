@@ -1,38 +1,87 @@
-.App {
-  text-align: center;
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.cal-container {
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    margin: 15px; 
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.cal-container .history-container {
+    background-color: red;
+    margin: 15px;
+    padding: 9px ;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+
+.cal-container .history-container .history {
+    background-color: #fff;
+    padding: 5px;
 }
 
-.App-link {
-  color: #61dafb;
+.cal-container .history-container .history ul li {
+    list-style: none;
+    cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+form {
+    padding: 5px 6px 5px 5px;
+    background-color: rgb(16, 72, 72);
+
 }
+
+form .calculator {
+    padding: 5px 10px;
+}
+
+form .calculator .buttons {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 15px 9px;
+}
+
+form .calculator .buttons input[type=button] {
+    padding: 10px 12px;
+    cursor: pointer;
+    color: green;
+    outline: none;
+    border-radius: 3px;
+    border: none;
+    font-weight: bolder;
+}
+
+form .calculator .buttons input[type=button]:hover{
+    background-color:rgb(121, 151, 151);
+    color: white;  
+}
+
+form .calculator input[type=text] {
+    padding: 15px 7px;
+    color: green;
+    background-color: aliceblue;
+    outline: none;
+    border: none;
+    text-align: right;
+    font-size: 15px;
+    margin: 7px 0;
+}
+
+form .calculator .equals {
+    width: 75px;
+}
+
+form .calculator .result {
+    position:absolute;
+    color: green;
+    top: 9rem;
+    padding-left: 5px;
+    font-size:20px;
+    font-weight: bold;
+}
+
